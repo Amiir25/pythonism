@@ -7,11 +7,4 @@
     	Albert Einstein once said, "person who never made a mistake never tried anything new."
 """
 
-# create a variable for the name
-name = 'Albert Einstein'
-
-# create a variable for the quote
-quote = 'person who never made a mistake never tried anything new.'
-
-# print the name and the quote using f-string
-print(f'{name} once said, "{quote}"')
+print('Malcolm X once said "The future belongs to those who prepare for it today."')
