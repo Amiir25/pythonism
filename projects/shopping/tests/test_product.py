@@ -12,5 +12,3 @@ from product import Product
 
 class TestProduct(unittest.TestCase):
 
-    def test_costructor(self):
-        """Test the 
