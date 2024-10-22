@@ -22,14 +22,14 @@ class Product:
     def price(self):
         """Getter method for __price attribute"""
 
-        return self.price
+        return self.__price
 
     @price.setter
     def price(self, price):
         """Setter method for __price attribute"""
 
-        if price <= 0 or price not int:
-            raise Exception("Invalid price")
+        if not isinstance(price, (int, float)) or price <= 0:
+            raise Exception("Invalid price! Price must be a positive number")
 
         self.__price = price
 
@@ -37,13 +37,13 @@ class Product:
     def stock(self):
         """Getter method for __stock attribute"""
 
-        return self.stock
+        return self.__stock
 
     @stock.setter
     def stock(self, stock):
         """Setter method for __stock attribute"""
 
-        if stock <= 0 or stock not in int:
-            raise Exception("Invalid stock")
+        if not isinstance(stock, int) or stock < 0:
+            raise Exception("Invalid stock! Stock must be a non-negative integer")
 
         self.__stock = stock
