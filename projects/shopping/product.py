@@ -11,7 +11,15 @@ class Product:
     """The product class"""
 
     def __init__(self, name, price, description, stock):
-        """Instantiates attributes of Product class"""
+        """
+        Instantiates attributes of Product class
+
+        Args:
+            name (string): The name of the product
+            price (float): The price of the product
+            description (string): A description about the product
+            stock (integer): stock quantity
+        """
 
         self.name = name
         self.price = price
@@ -29,10 +37,9 @@ class Product:
         """Setter method for __price attribute"""
 
         if not isinstance(price, (int, float)) or price <= 0:
-            raise Exception("Invalid price! Price must be a positive number")
+            raise Exception("Invalid price! Must be a positive number")
 
         self.__price = price
-
     @property
     def stock(self):
         """Getter method for __stock attribute"""
@@ -44,6 +51,6 @@ class Product:
         """Setter method for __stock attribute"""
 
         if not isinstance(stock, int) or stock < 0:
-            raise Exception("Invalid stock! Stock must be a non-negative integer")
+            raise Exception("Invalid stock! Must be a non-negative integer")
 
         self.__stock = stock
