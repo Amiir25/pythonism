@@ -3,16 +3,17 @@
 """
 exceptions.py
 
-This file contains custom exception classes
+This file contains custom exception classes for the shopping project
 """
 
 
 class InvalidPriceError(Exception):
-    """Custome exception class for invalid price"""
+    """Custom exception class for invalid price"""
 
     pass
 
+
 class InvalidStockError(Exception):
-    """Custome exception class for invalid stock"""
+    """Custom exception class for invalid stock"""
 
     pass
