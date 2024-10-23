@@ -88,6 +88,7 @@ class Product:
                 "Amount to remove must be greater than 0")
 
         if amount > self.stock:
-            raise exceptions.InvalidStockError("Can not remove more stock than available")
+            raise exceptions.InvalidStockError(
+                "Can not remove more stock than available")
 
         self.stock -= amount
