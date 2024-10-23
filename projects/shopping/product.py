@@ -49,6 +49,7 @@ class Product:
                "Invalid price! Must be a positive number")
 
         self.__price = price
+
     @property
     def stock(self):
         """Getter method for __stock attribute"""
