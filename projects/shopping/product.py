@@ -31,8 +31,8 @@ class Product:
     def __repr__(self):
         """Returns a developer-friendly representation of an object"""
 
-        return "Product(name={}, price={}, stock={}).
-                format(self.name, self.price, self.stock)"
+        return "Product(name={}, price={}, stock={}").
+                format(self.name, self.price, self.stock)
 
     @property
     def price(self):
