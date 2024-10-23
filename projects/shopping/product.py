@@ -31,8 +31,8 @@ class Product:
     def __repr__(self):
         """Returns a developer-friendly representation of an object"""
 
-        return "Product(name={}, price={}, stock={})".
-                format(self.name, self.price, self.stock)
+        return "Product(name={}, price={}, stock={})".format(
+                self.name, self.price, self.stock)
 
     @property
     def price(self):
@@ -45,7 +45,8 @@ class Product:
         """Setter method for __price attribute"""
 
         if not isinstance(price, (int, float)) or price <= 0:
-            raise exceptions.InvalidPriceError("Invalid price! Must be a positive number")
+            raise exceptions.InvalidPriceError(
+               "Invalid price! Must be a positive number")
 
         self.__price = price
     @property
