@@ -60,7 +60,8 @@ class Product:
         """Setter method for __stock attribute"""
 
         if not isinstance(stock, int) or stock < 0:
-            raise exceptions.InvalidStockError("Invalid stock! Must be a non-negative integer")
+            raise exceptions.InvalidStockError(
+                "Invalid stock! Must be a non-negative integer")
 
         self.__stock = stock
 
