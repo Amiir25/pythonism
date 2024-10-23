@@ -28,6 +28,10 @@ class Product:
         self.description = description
         self.stock = stock
 
+    def __repr__(self):
+        return "Product(name={}, price={}, stock={}).
+                format(self.name, self.price, self.stock)"
+
     @property
     def price(self):
         """Getter method for __price attribute"""
