@@ -75,3 +75,11 @@ class Product:
             raise exceptions.InvalidStockError("Amount to add must be greater than 0")
 
         self.stock += amount
+
+    def remove_stock(self, amount):
+        """Removes a stock for a product"""
+
+        if ammount <= 0:
+            raise exceptions.InvalidStockError("Amount to remove must be greater than 0")
+
+        self.stock -= amount
