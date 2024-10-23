@@ -75,7 +75,8 @@ class Product:
         """Adds a stock for a product"""
 
         if amount <= 0:
-            raise exceptions.InvalidStockError("Amount to add must be greater than 0")
+            raise exceptions.InvalidStockError(
+                "Amount to add must be greater than 0")
 
         self.stock += amount
 
