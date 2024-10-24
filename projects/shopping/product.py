@@ -31,8 +31,21 @@ class Product:
     def __repr__(self):
         """Returns a developer-friendly representation of an object"""
 
-        return "Product(name={}, price={}, stock={})".format(
-                self.name, self.price, self.stock)
+        return "Product(name={}, price={}, description={}, stock={})".format(
+                self.name, self.price, self.description, self.stock)
+
+    def __eq__(self, other):
+        """ """
+
+        if isinstance(other, Product):
+            return (
+                self.name == other.name and
+                self.price == other.price and
+                self.description == other.description and
+                self.stock == other.stock
+            )
+
+        return False
 
     @property
     def price(self):
