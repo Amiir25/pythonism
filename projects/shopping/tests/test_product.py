@@ -59,9 +59,9 @@ class TestProduct(unittest.TestCase):
     def test_invalid_stock(self):
         """Test the 'stock' attribute with invalid data"""
 
-        with self.Raises(exceptions.InvalidStockError):
+        with self.assertRaises(exceptions.InvalidStockError):
             self.p1.stock = -127
-        with self.Raises(exceptions.InvalidStockError):
+        with self.assertRaises(exceptions.InvalidStockError):
             self.p1.stock = "127"
 
 if __name__ == "__main__":
