@@ -74,5 +74,13 @@ class TestProduct(unittest.TestCase):
         self.p1.stock = 0
         self.assertEqual(self.p1.is_in_stock(), False)
 
+    def test_add_stock(self):
+        """Test if the class adds stock correctly"""
+
+        self.p1.add_stock(10)
+        self.assertEqual(self.p1.stock, 31)
+        with self.assertRaises(exceptions.InvalidStockError):
+            self.p1.add_stock(-10)
+
 if __name__ == "__main__":
     unittest.main()
