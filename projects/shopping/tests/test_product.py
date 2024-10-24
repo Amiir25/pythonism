@@ -87,6 +87,8 @@ class TestProduct(unittest.TestCase):
 
         with self.assertRaises(exceptions.InvalidStockError):
             self.p1.remove_stock(0)
+        with self.assertRaises(exceptions.InvalidStockError):
+            self.p1.remove_stock(-10)
 
 
 if __name__ == "__main__":
