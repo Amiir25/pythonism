@@ -48,7 +48,21 @@ class TestProduct(unittest.TestCase):
         with self.assertRaises(exceptions.InvalidPriceError):
             self.p1.price = "21.55"
 
+    def test_valid_stock(self):
+        """Test the 'stock' attribute with valid data"""
 
+        self.p1.stock = 127
+        self.assertEqual(self.p1.stock, 127)
+        self.p1.stock = 0
+        self.assertEqual(self.p1.stock, 0)
+
+    def test_invalid_stock(self):
+        """Test the 'stock' attribute with invalid data"""
+
+        with self.Raises(exceptions.InvalidStockError):
+            self.p1.stock = -127
+        with self.Raises(exceptions.InvalidStockError):
+            self.p1.stock = "127"
 
 if __name__ == "__main__":
     unittest.main()
