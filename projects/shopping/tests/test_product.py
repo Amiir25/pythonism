@@ -11,12 +11,13 @@ import unittest
 from product import Product
 import exceptions
 
+
 class TestProduct(unittest.TestCase):
 
     def setUp(self):
         """This method runs before every test"""
 
-        self.p1 = Product(".py", 12.55, "Python Book", 21)        
+        self.p1 = Product(".py", 12.55, "Python Book", 21)
 
     def test_constructor(self):
         """Test the constructor"""
@@ -25,8 +26,8 @@ class TestProduct(unittest.TestCase):
         self.assertEqual(self.p1.price, 12.55)
         self.assertEqual(self.p1.description, "Python Book")
         self.assertEqual(self.p1.stock, 21)
-        self.assertEqual(self.p1, Product(name=".py", price=12.55, description="Python Book", stock=21))
-
+        self.assertEqual(self.p1, Product(
+            name=".py", price=12.55, description="Python Book", stock=21))
 
     def test_valid_price(self):
         """Test the 'price' attribute with valid data"""
