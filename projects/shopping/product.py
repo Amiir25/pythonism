@@ -35,7 +35,7 @@ class Product:
                 self.name, self.price, self.description, self.stock)
 
     def __eq__(self, other):
-        """ """
+        """Overrides the default implementation of == for object comparison"""
 
         if isinstance(other, Product):
             return (
