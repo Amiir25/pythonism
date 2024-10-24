@@ -13,16 +13,29 @@ from product import Product
 
 class TestProduct(unittest.TestCase):
 
+    def setUp(self):
+        """This method runs before every test"""
+
+        self.p1 = Product(".py", 12.55, "Python Book", 21)        
+
     def test_constructor(self):
-        """Tests the constructor"""
+        """Test the constructor"""
 
-        p1 = Product("B", 12.55, "Book", 21)
-        self.assertEqual(p1.name, "B")
-        self.assertEqual(p1.price, 12.55)
-        self.assertEqual(p1.description, "Book")
-        self.assertEqual(p1.stock, 21)
-        self.assertEqual(p1, Product(name="B", price=12.55, description="Book", stock=21))
+        self.assertEqual(self.p1.name, ".py")
+        self.assertEqual(self.p1.price, 12.55)
+        self.assertEqual(self.p1.description, "Python Book")
+        self.assertEqual(self.p1.stock, 21)
+        self.assertEqual(self.p1, Product(name=".py", price=12.55, description="Python Book", stock=21))
 
+
+    def test_price(self):
+        """Test the 'price' attribute"""
+
+        self.p1.price = 43
+        self.assertEqual(self.p1.price, 43)
+        self.p1.price = "25.75"
+        self.assertRaises(InvalidPriceError, self.p1.price)
+        
 
 if __name__ == "__main__":
     unittest.main()
