@@ -17,7 +17,7 @@ class TestProduct(unittest.TestCase):
         """Tests the constructor"""
 
         p1 = Product("B", 12.55, "Book", 21)
-        self.assertEqual(p1, Product(name=B, price=12.55, stock=21))
+        self.assertEqual(p1, Product(name="B", price=12.55, description="Book", stock=21))
 
 
 if __name__ == "__main__":
