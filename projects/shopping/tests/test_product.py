@@ -42,7 +42,13 @@ class TestProduct(unittest.TestCase):
         """Test the 'price' attribute with invalid data"""
 
         with self.assertRaises(exceptions.InvalidPriceError):
+            self.p1.price = 0
+        with self.assertRaises(exceptions.InvalidPriceError):
+            self.p1.price = -21.55
+        with self.assertRaises(exceptions.InvalidPriceError):
             self.p1.price = "21.55"
+
+
 
 if __name__ == "__main__":
     unittest.main()
