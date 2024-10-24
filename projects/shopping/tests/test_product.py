@@ -33,6 +33,10 @@ class TestProduct(unittest.TestCase):
 
         self.p1.price = 43
         self.assertEqual(self.p1.price, 43)
+        self.p1.price = 123.4567
+        self.assertEqual(self.p1.price, 123.4567)
+        self.p1.price = 0.175
+        self.assertEqual(self.p1.price, 0.175)
 
     def test_invalid_price(self):
         """Test the 'price' attribute with invalid data"""
