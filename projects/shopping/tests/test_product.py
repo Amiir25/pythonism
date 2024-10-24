@@ -9,7 +9,7 @@ This module provides a unittest class for the
 
 import unittest
 from product import Product
-
+import exceptions
 
 class TestProduct(unittest.TestCase):
 
@@ -28,14 +28,17 @@ class TestProduct(unittest.TestCase):
         self.assertEqual(self.p1, Product(name=".py", price=12.55, description="Python Book", stock=21))
 
 
-    def test_price(self):
-        """Test the 'price' attribute"""
+    def test_valid_price(self):
+        """Test the 'price' attribute with valid data"""
 
         self.p1.price = 43
         self.assertEqual(self.p1.price, 43)
-        self.p1.price = "25.75"
-        self.assertRaises(InvalidPriceError, self.p1.price)
-        
+
+    def test_invalid_price(self):
+        """Test the 'price' attribute with invalid data"""
+
+        with self.assertRaises(exceptions.InvalidPriceError):
+            self.p1.price = "21.55"
 
 if __name__ == "__main__":
     unittest.main()
