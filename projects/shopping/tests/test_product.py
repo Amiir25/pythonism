@@ -81,6 +81,8 @@ class TestProduct(unittest.TestCase):
         self.p1.add_stock(10)
         self.assertEqual(self.p1.stock, 31)
         with self.assertRaises(exceptions.InvalidStockError):
+            self.p1.add_stock(0)
+        with self.assertRaises(exceptions.InvalidStockError):
             self.p1.add_stock(-10)
 
     def test_remove_stock(self):
