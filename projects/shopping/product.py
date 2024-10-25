@@ -47,6 +47,7 @@ class Product:
 
         return False
 
+    # Getter and setter for __price attribute
     @property
     def price(self):
         """Getter method for __price attribute"""
@@ -63,6 +64,7 @@ class Product:
 
         self.__price = price
 
+    # Getter and setter for __stock attribute
     @property
     def stock(self):
         """Getter method for __stock attribute"""
