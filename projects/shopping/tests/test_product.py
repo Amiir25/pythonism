@@ -14,10 +14,11 @@ from product import Product
 class TestProduct(unittest.TestCase):
 
     def setUp(self):
-        """This method runs before every test"""
+        """
+        This method runs before every test. It initializes an instance of
+        Product class which can be shared across multiple tests
+        """
 
-        # Initialize an instance of Product class which can be
-        # shared across multiple tests
         self.p1 = Product(".py", 12.55, "Python Book", 21)
 
     def test_constructor(self):
