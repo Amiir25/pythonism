@@ -16,6 +16,7 @@ class TestProduct(unittest.TestCase):
     def setUp(self):
         """This method runs before every test"""
 
+        # Initialize an instance of Product class which can be shared across multiple tests
         self.p1 = Product(".py", 12.55, "Python Book", 21)
 
     def test_constructor(self):
@@ -26,6 +27,7 @@ class TestProduct(unittest.TestCase):
         self.assertEqual(self.p1.description, "Python Book")
         self.assertEqual(self.p1.stock, 21)
 
+        # Test the __repr__method
         self.assertEqual(self.p1, Product(
             name=".py", price=12.55, description="Python Book", stock=21))
 
