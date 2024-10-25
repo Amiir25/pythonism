@@ -8,8 +8,8 @@ This module provides a unittest class for the
 """
 
 import unittest
-from product import Product
 import exceptions
+from product import Product
 
 
 class TestProduct(unittest.TestCase):
@@ -20,17 +20,18 @@ class TestProduct(unittest.TestCase):
         self.p1 = Product(".py", 12.55, "Python Book", 21)
 
     def test_constructor(self):
-        """Test the constructor"""
+        """Test the __init__ constructor"""
 
         self.assertEqual(self.p1.name, ".py")
         self.assertEqual(self.p1.price, 12.55)
         self.assertEqual(self.p1.description, "Python Book")
         self.assertEqual(self.p1.stock, 21)
+
         self.assertEqual(self.p1, Product(
             name=".py", price=12.55, description="Python Book", stock=21))
 
     def test_valid_price(self):
-        """Test the 'price' attribute with valid data"""
+        """Test the 'price' attribute with valid input"""
 
         self.p1.price = 43
         self.assertEqual(self.p1.price, 43)
@@ -40,7 +41,7 @@ class TestProduct(unittest.TestCase):
         self.assertEqual(self.p1.price, 0.175)
 
     def test_invalid_price(self):
-        """Test the 'price' attribute with invalid data"""
+        """Test the 'price' attribute with invalid input"""
 
         with self.assertRaises(exceptions.InvalidPriceError):
             self.p1.price = 0
@@ -50,7 +51,7 @@ class TestProduct(unittest.TestCase):
             self.p1.price = "21.55"
 
     def test_valid_stock(self):
-        """Test the 'stock' attribute with valid data"""
+        """Test the 'stock' attribute with valid input"""
 
         self.p1.stock = 127
         self.assertEqual(self.p1.stock, 127)
@@ -58,7 +59,7 @@ class TestProduct(unittest.TestCase):
         self.assertEqual(self.p1.stock, 0)
 
     def test_invalid_stock(self):
-        """Test the 'stock' attribute with invalid data"""
+        """Test the 'stock' attribute with invalid input"""
 
         with self.assertRaises(exceptions.InvalidStockError):
             self.p1.stock = -21
@@ -70,7 +71,6 @@ class TestProduct(unittest.TestCase):
     def test_is_in_stock(self):
         """Test if a product is in stock"""
 
-        self.p1.stock = 22
         self.assertEqual(self.p1.is_in_stock(), True)
         self.p1.stock = 0
         self.assertEqual(self.p1.is_in_stock(), False)
@@ -86,12 +86,12 @@ class TestProduct(unittest.TestCase):
     def test_remove_stock(self):
         """Test if the class removes stock correctly"""
 
+        self.p1.remove_stock(10)
+        self.assertEqual(self.p1.stock, 11)
         with self.assertRaises(exceptions.InvalidStockError):
             self.p1.remove_stock(0)
         with self.assertRaises(exceptions.InvalidStockError):
             self.p1.remove_stock(-10)
-        self.p1.remove_stock(10)
-        self.assertEqual(self.p1.stock, 11)
 
 
 if __name__ == "__main__":
