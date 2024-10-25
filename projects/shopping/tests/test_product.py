@@ -90,9 +90,9 @@ class TestProduct(unittest.TestCase):
         self.p1.remove_stock(10)
         self.assertEqual(self.p1.stock, 11)
         with self.assertRaises(exceptions.InvalidStockError):
-            self.p1.remove_stock(100)
-        with self.assertRaises(exceptions.InvalidStockError):
             self.p1.remove_stock(0)
+        with self.assertRaises(exceptions.InvalidStockError):
+            self.p1.remove_stock(100)
         with self.assertRaises(exceptions.InvalidStockError):
             self.p1.remove_stock(-10)
 
