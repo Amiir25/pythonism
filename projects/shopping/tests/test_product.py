@@ -3,8 +3,7 @@
 """
 test_product.py
 
-This module provides a unittest class for the
-'product' module.
+This module provides a unittest class for the 'product' module.
 """
 
 import unittest
