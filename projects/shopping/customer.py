@@ -7,11 +7,10 @@ This file provides a 'Customer' class that contains information
 about the customer.
 """
 
-from product import Product
 import exceptions
 
 
-class Customer(Product):
+class Customer():
     """The Customer class"""
 
     def __init__(self, name, email, address, order_history):
@@ -50,7 +49,7 @@ class Customer(Product):
             raise exceptions.InvalidEmailError(
                 "Invalid Email! Must be a string")
 
-        if '@' or '.' not in email:
+        if '@' not in email or '.' not in email:
             raise exceptions.InvalidEmailError(
                 "Email must contain @ and . signs")
 
