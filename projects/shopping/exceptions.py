@@ -17,3 +17,8 @@ class InvalidStockError(Exception):
     """Custom exception class for invalid stock"""
 
     pass
+
+class InvalidEmailError(Exception):
+    """Custome exception class for invalid email"""
+
+    pass
