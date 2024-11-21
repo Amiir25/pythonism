@@ -3,7 +3,7 @@
 """
 exceptions.py
 
-This file contains custom exception classes for the shopping project
+This module contains custom exception classes for the shopping project
 """
 
 
