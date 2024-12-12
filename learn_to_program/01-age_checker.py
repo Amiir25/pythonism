@@ -13,7 +13,7 @@ age = int(input("Enter your age: "))
 if (age < 4 and age >= 0):
 	print("Too early to go to school!")
 
-# if the age is 4 to 6, they're going to kindergarten
+# if the age is between 4 and 6, they're going to kindergarten
 elif (age >= 4 and age <= 6):
 	print("Go to kindergarten!")
 
