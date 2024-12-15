@@ -7,5 +7,5 @@ you like to learn some Python today?"
 '''
 
 
-name = 'Eric'
+name = 'Tedy'
 print(f'Hello {name}, Would you like to learn some Python today?')
