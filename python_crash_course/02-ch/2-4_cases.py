@@ -8,7 +8,7 @@ print that person's name in lowercase, uppercase, and title case.
 # define a variable & assign a string
 name = 'aMiR sAdIk'
 
-# print the name in all lowecase
+# print the name in lowecase
 print(name.lower())
 
 #print the name in all uppercase
