@@ -5,7 +5,7 @@ Use a variable to represent a person's name, and then
 print that person's name in lowercase, uppercase, and title case.
 """
 
-# define a variable & assign a name
+# define a variable & assign a string
 name = 'aMiR sAdIk'
 
 # print the name in all lowecase
