@@ -11,7 +11,7 @@ name = 'aMiR sAdIk'
 # print the name in lowecase
 print(name.lower())
 
-#print the name in all uppercase
+#print the name in uppercase
 print(name.upper())
 
 # print the name in title case (capitalise the first letter of each word)
