@@ -1,7 +1,7 @@
 '''
 02-tree_size.py
 
-	Ask the user for a number and print a tree like shape using the
+Ask the user for a number and print a tree like shape using the
 	# sign by the size of the input. This an example out put for input 
 	value of 5.
 
