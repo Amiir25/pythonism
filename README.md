@@ -1,1 +1,1 @@
-Simple and advanced Python projects from different sources
+Simple and advanced Python projects.
