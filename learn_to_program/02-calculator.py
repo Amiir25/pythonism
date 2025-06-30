@@ -12,7 +12,7 @@ num1, operator, num2 = input("Perform a calculation: ").split()
 # convert the two numbers to integer
 num1, num2 = int(num1), int(num2)
 
-# check the operator
+# check the operator entered by the user
 match operator:
 
 	# if it is addition, print the sum
