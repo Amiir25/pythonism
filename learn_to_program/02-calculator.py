@@ -6,7 +6,7 @@ with two numbers. Both the numbers and the operator should
 be entered by the user.
 '''
 
-# Ask the user to enter two numbers and an operator & assign them for variables
+# Ask the user to enter two numbers with an operator & assign them for variables
 num1, operator, num2 = input("Perform a calculation: ").split()
 
 # convert the two numbers to integer
