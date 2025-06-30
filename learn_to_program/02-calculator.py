@@ -2,7 +2,7 @@
 calculator.py
 
 Write a python code that performs math operation 
-on two numbers. Both the numbers and the operator should
+with two numbers. Both the numbers and the operator should
 be entered by the user.
 '''
 
