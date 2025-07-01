@@ -30,7 +30,7 @@ match operator:
 	# for division, check the second number
 	case '/':
 
-		# if true, print the quotient
+		# if it is not 0, print the quotient
 		if (num2 != 0):
 			print("{} /{} = {}".format(num1, num2, num1 / num2))
 
