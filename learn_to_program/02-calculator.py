@@ -45,7 +45,7 @@ match operator:
 		if (num2 != 0):
 			print("{} % {} = {}".format(num1, num2, num1 % num2))
 
-		# else print error message
+		# otherwise, print error message
 		else:
 			print("Invalid denominator")
 
