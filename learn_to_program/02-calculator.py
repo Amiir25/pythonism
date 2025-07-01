@@ -49,6 +49,6 @@ match operator:
 		else:
 			print("Invalid denominator")
 
-	# else print error mesasge
+	# for empty or not operator sign, print error mesasge
 	case _:
 		print("Invalid operator!")
