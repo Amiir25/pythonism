@@ -41,7 +41,7 @@ match operator:
 	# for modulo, check the second number
 	case '%':
 
-		# if true, print the remainder
+		# if it is not 0, print the remainder
 		if (num2 != 0):
 			print("{} % {} = {}".format(num1, num2, num1 % num2))
 
