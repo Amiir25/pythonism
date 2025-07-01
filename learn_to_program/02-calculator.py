@@ -23,7 +23,7 @@ match operator:
 	case '-':
 		print("{} - {} = {}".format(num1, num2, num1 - num2))
 
-	# if it is multiplication, print the product
+	# for multiplication, print the product
 	case '*':
 		print("{} * {} = {}".format(num1, num2, num1 * num2))
 
