@@ -27,7 +27,7 @@ match operator:
 	case '*':
 		print("{} * {} = {}".format(num1, num2, num1 * num2))
 
-	# for division, check if the second number is not 0
+	# for division, check the second number
 	case '/':
 
 		# if true, print the quotient
