@@ -38,7 +38,7 @@ match operator:
 		else:
 			print("Invalid denominator!")
 
-	# if it is modulo, check if the second number is not from 0
+	# for modulo, check if the second number is not from 0
 	case '%':
 
 		# if true, print the remainder
