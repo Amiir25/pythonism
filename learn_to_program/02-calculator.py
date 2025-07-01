@@ -15,7 +15,7 @@ num1, num2 = int(num1), int(num2)
 # check the operator entered by the user
 match operator:
 
-	# if it is addition, print the sum
+	# for addition, print the sum
 	case '+':
 		print("{} + {} = {}".format(num1, num2, num1 + num2))
 
