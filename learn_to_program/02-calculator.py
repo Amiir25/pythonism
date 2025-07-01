@@ -19,7 +19,7 @@ match operator:
 	case '+':
 		print("{} + {} = {}".format(num1, num2, num1 + num2))
 
-	# if it is subtraction, print the difference
+	# for subtraction, print the difference
 	case '-':
 		print("{} - {} = {}".format(num1, num2, num1 - num2))
 
