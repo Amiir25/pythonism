@@ -1,7 +1,7 @@
 '''
 03-secret_message.py
 
-Accept a string from the user. Convert the string in to
+Accept a string from the user. Convert it in to
 its equivalent unicode and print it as a secret message.
 And convert the unicode back to its original message and
 print it as original message.
