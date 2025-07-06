@@ -1,1 +1,1 @@
-Simple and advanced Python projects.
+A collection of Python projects.
