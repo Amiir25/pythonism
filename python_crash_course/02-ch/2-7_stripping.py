@@ -15,7 +15,7 @@ name = "\tAmir Sadik \n"
 # print the name with the white spaces
 print(name)
 
-# print the name with lstrip() method
+# print the name with the lstrip() method
 print(name.lstrip())
 
 # print the name with rstrip() method
