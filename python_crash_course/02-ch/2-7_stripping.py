@@ -12,7 +12,7 @@ three stripping functions, lstrip(), rstrip(), and strip().
 # create a variable for the person's name and add white spaces (tab and newline)
 name = "\tAmir Sadik \n"
 
-# print the name with white spaces
+# print the name with the white spaces
 print(name)
 
 # print the name using lstrip() method
