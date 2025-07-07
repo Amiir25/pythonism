@@ -21,5 +21,5 @@ print(name.lstrip())
 # print the name with the rstrip() method
 print(name.rstrip())
 
-# print the name wiht strip() method
+# print the name wiht the strip() method
 print(name.strip())
