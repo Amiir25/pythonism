@@ -18,7 +18,7 @@ print(name)
 # print the name with the lstrip() method
 print(name.lstrip())
 
-# print the name with rstrip() method
+# print the name with the rstrip() method
 print(name.rstrip())
 
 # print the name wiht strip() method
